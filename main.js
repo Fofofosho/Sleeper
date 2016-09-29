@@ -9,7 +9,7 @@ app.on("ready", function() {
         {
             width: 300, 
             height: 300,
-            title: "DesktopSleep",
+            title: "Sleeper",
             autoHideMenuBar: true
         });
 
