@@ -1,4 +1,5 @@
 // require node process stuff so I can call my script.
+const exec = require('child_process').exec;
 
 var button = document.getElementById("setBtn");
 button.addEventListener("click", function() {
@@ -29,6 +30,7 @@ function updateField(val, sel) {
         setTimeout(function() {
             console.log("ending event fired");
             document.getElementById("sleep-text").innerText = "SLEEp!";
+            executeBat();
         }, 1000);
     });
 
@@ -59,4 +61,17 @@ function convertToMilli(val, sel) {
         case "hours":
             return val * 3600 * 1000;
     }
+}
+
+function executeBat() {
+    exec('test.bat',
+        function (error, stdout, stderr) {
+            if (error) {
+                console.log('exec error: ' + error);
+                return;
+            }
+
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+        });
 }
