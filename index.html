@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="sleep-text">sleep?</h1>
+    
+    <div id="selection">
+        <input id=inputVal type="number"/>
+        <select id="increments">
+            <option value="seconds">seconds</option>
+            <option value="minutes">minutes</option>
+            <option value="hours">hours</option>
+        </select>
+    </div>
+    
+    <button id="setBtn" type="submit" value="set">set!</button>
+
+    <div id="wordage" class="xx-large hidden">
+        <p>Sleeping in</p>
+    </div>
+
+    <div id="timer" class="xx-large hidden">
+    </div>
+    
+    <script>require("./index.js");</script>
+</body>
+</html>

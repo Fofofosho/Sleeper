@@ -1,0 +1,12 @@
+h1 {
+    font-family: sans-serif;
+    color: green;
+}
+
+#setBtn {
+    margin-top: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
