@@ -66,7 +66,7 @@ function convertToMilli(val, sel) {
 
 function executeSleep() {
     //Specifically for windows
-    exec('assets\\test.bat',
+    exec('assets\\sleep.bat',
         function (error, stdout, stderr) {
             if (error) {
                 console.log('exec error: ' + error);
