@@ -19,9 +19,10 @@ button.addEventListener("click", function() {
 
 function updateField(val, sel) {
     let event = new Event("timeEnded");
-    let textNode = document.createTextNode(`${val} ${sel}`);
     let updates = document.getElementById("wordage");
     let timer = document.getElementById("timer");
+    let textNode = document.createTextNode("");
+
     updates.classList.toggle("hidden");
     timer.classList.toggle("hidden");
     timer.appendChild(textNode);
@@ -30,19 +31,19 @@ function updateField(val, sel) {
         setTimeout(function() {
             console.log("ending event fired");
             document.getElementById("sleep-text").innerText = "SLEEp!";
-            executeBat();
+            executeSleep();
         }, 1000);
     });
 
     let milliVal = convertToMilli(val, sel);
-    let newVal = milliVal / 1000;
-    var interval = setInterval(function() {
-        timer.innerHTML = `<p>${newVal} seconds</p>`;
-        console.log(`Sleeping in ${newVal} ${sel}`);
-        if ( newVal == 0 )
+    let seconds = milliVal / 1000;
+    let interval = setInterval(function() {
+        timer.innerHTML = `<p>${seconds}</p>`;
+        console.log(`Sleeping in ${seconds} ${sel}`);
+        if ( seconds == 0 )
             timer.dispatchEvent(event);
 
-        newVal--;
+        seconds--;
     }, 1000);
 
     setTimeout(function() {
@@ -63,8 +64,9 @@ function convertToMilli(val, sel) {
     }
 }
 
-function executeBat() {
-    exec('test.bat',
+function executeSleep() {
+    //Specifically for windows
+    exec('assets\\test.bat',
         function (error, stdout, stderr) {
             if (error) {
                 console.log('exec error: ' + error);

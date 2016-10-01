@@ -1,12 +1,23 @@
 h1 {
-    font-family: sans-serif;
     color: green;
+}
+
+body {
+    font-family: sans-serif;
 }
 
 #setBtn {
     margin-top: 10px;
 }
 
+#block-container {
+    text-align: center;
+}
 .hidden {
     visibility: hidden;
+}
+
+/* Doesn't work */
+#wordage, #timer {
+    display: inline;
 }
