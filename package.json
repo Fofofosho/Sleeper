@@ -4,7 +4,8 @@
   "description": "A minimal app to sleep your computer.",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "build": "electron-packager . Sleeper --platform=win32 --arch=x64 --version=1.0.0"
   },
   "keywords": [],
   "author": "Forrest Townsend",
