@@ -1,12 +1,12 @@
 {
-  "name": "Sleeper",
+  "name": "sleeper",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal app to sleep your computer.",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Forrest Townsend",
   "license": "ISC"
 }
