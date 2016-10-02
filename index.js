@@ -1,5 +1,6 @@
 // require node process stuff so I can call my script.
-const exec = require('child_process').exec;
+const exec = require("child_process").exec;
+const os = require("os");
 
 var button = document.getElementById("setBtn");
 button.addEventListener("click", function() {
@@ -66,14 +67,30 @@ function convertToMilli(val, sel) {
 
 function executeSleep() {
     //Specifically for windows
-    exec('assets\\sleep.bat',
-        function (error, stdout, stderr) {
-            if (error) {
-                console.log('exec error: ' + error);
-                return;
-            }
+    if (os.type() === "Windows_NT")
+    {
+        exec('assets\\test.bat',
+            function (error, stdout, stderr) {
+                if (error) {
+                    console.log('exec error: ' + error);
+                    return;
+                }
 
-            console.log('stdout: ' + stdout);
-            console.log('stderr: ' + stderr);
-        });
+                console.log('stdout: ' + stdout);
+                console.log('stderr: ' + stderr);
+            });
+    }
+    else
+    {
+        exec('assets\\sleep-UNIX.sh',
+            function (error, stdout, stderr) {
+                if (error) {
+                    console.log('exec error: ' + error);
+                    return;
+                }
+
+                console.log('stdout: ' + stdout);
+                console.log('stderr: ' + stderr);
+            });
+    }
 }
