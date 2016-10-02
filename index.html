@@ -1,13 +1,15 @@
 <html>
 <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <h1 id="sleep-text">sleep?</h1>
     
     <div id="selection">
         <input id=inputVal type="number"/>
-        <select id="increments">
+        <select id="increments" class="selectpicker">
             <option value="seconds">seconds</option>
             <option value="minutes">minutes</option>
             <option value="hours">hours</option>
@@ -25,6 +27,9 @@
         </div>
     </div>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
     <script>require("./index.js");</script>
 </body>
 </html>
