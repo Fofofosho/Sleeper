@@ -15,6 +15,7 @@ html {
             margin: 1em 0;
             text-align: center;
             text-shadow: 0px 2px 3px rgba(0,0,0,0.15);
+            cursor: default;
 
             &:after {
                 display: block;
@@ -22,6 +23,14 @@ html {
                 height: 4px;
                 max-width: 15%;
                 background-color: #ffffff;
+                -webkit-transition: all 0.25s ease-out;
+                -moz-transition: all 0.25s ease-out;
+                -o-transition: all 0.25s ease-out;
+                transition: all 0.25s ease-out;
+            }
+
+            &:hover {
+                &:after { max-width: 100%; }
             }
         }
         input, button, select {

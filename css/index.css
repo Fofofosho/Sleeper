@@ -11,13 +11,20 @@ html {
       font-size: 4em;
       margin: 1em 0;
       text-align: center;
-      text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15); }
+      text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+      cursor: default; }
       html body h1:after {
         display: block;
         content: '';
         height: 4px;
         max-width: 15%;
-        background-color: #ffffff; }
+        background-color: #ffffff;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out; }
+      html body h1:hover:after {
+        max-width: 100%; }
     html body input, html body button, html body select {
       background-color: #49546b;
       border: none;
