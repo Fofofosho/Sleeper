@@ -18,7 +18,7 @@ html {
         content: '';
         height: 4px;
         max-width: 15%;
-        background-color: #ffffff;
+        background-color: #ebbf26;
         -webkit-transition: all 0.25s ease-out;
         -moz-transition: all 0.25s ease-out;
         -o-transition: all 0.25s ease-out;
@@ -54,7 +54,7 @@ html {
     html body .form-group {
       margin: 0; }
     html body .start {
-      border-bottom: 4px solid #ffffff;
+      border-bottom: 4px solid #ebbf26;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0; }
       html body .start .material-icons {

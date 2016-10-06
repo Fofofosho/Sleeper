@@ -1,9 +1,14 @@
+$gold: #ebbf26;
+$blue-dark: #3b4457;
+$blue-medium: #424c61;
+$blue-light: #49546b;
+$blue-extra-light: #5c6a87;
 
 html {
     font-size: 100%;
 
     body {
-        background-color: #3b4457;
+        background-color: $blue-dark;
         font-family: 'Poiret One';
         font-size: 100%;
         padding: 4em 1em;
@@ -22,7 +27,7 @@ html {
                 content: '';
                 height: 4px;
                 max-width: 15%;
-                background-color: #ffffff;
+                background-color: $gold;
                 -webkit-transition: all 0.25s ease-out;
                 -moz-transition: all 0.25s ease-out;
                 -o-transition: all 0.25s ease-out;
@@ -35,7 +40,7 @@ html {
         }
         input, button, select {
             $height: 2em;
-            background-color: #49546b;
+            background-color: $blue-light;
             border: none;
             border-radius: 5px;
             box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
@@ -48,13 +53,13 @@ html {
             &.indent {
                 text-indent: 0.5em;
             }
-            &:hover { background-color: #5c6a87; }
+            &:hover { background-color: $blue-extra-light; }
         }
 
         [class*="col-"] { padding: 0 0.25em; }
 
         .container {
-            background-color: #424c61;
+            background-color: $blue-medium;
             border-radius: 5px;
             box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
             margin: 0 auto;
@@ -65,8 +70,7 @@ html {
         .row { margin: 0 -0.25em; }
         .form-group { margin: 0; }
         .start {
-            //background-color: #5c6a87;
-            border-bottom: 4px solid #ffffff;
+            border-bottom: 4px solid $gold;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
 
