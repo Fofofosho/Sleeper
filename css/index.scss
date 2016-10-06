@@ -1,0 +1,106 @@
+
+html {
+    font-size: 100%;
+
+    body {
+        background-color: #3b4457;
+        font-family: 'Poiret One';
+        font-size: 100%;
+        padding: 4em 1em;
+
+        h1 {
+            color: #ffffff;
+            display: inline-block;
+            font-size: 4em;
+            margin: 1em 0;
+            text-align: center;
+            text-shadow: 0px 2px 3px rgba(0,0,0,0.15);
+
+            &:after {
+                display: block;
+                content: '';
+                height: 4px;
+                max-width: 15%;
+                background-color: #ffffff;
+            }
+        }
+        input, button, select {
+            $height: 2em;
+            background-color: #49546b;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+            color: #ffffff;
+            font-size: $height;
+            line-height: $height;
+            height: $height;
+            width: 100%;
+
+            &.indent {
+                text-indent: 0.5em;
+            }
+            &:hover { background-color: #5c6a87; }
+        }
+
+        [class*="col-"] { padding: 0 0.25em; }
+
+        .container {
+            background-color: #424c61;
+            border-radius: 5px;
+            box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+            margin: 0 auto;
+            max-width: 480px;
+            padding: 1em;
+            text-align: center;
+        }
+        .row { margin: 0 -0.25em; }
+        .form-group { margin: 0; }
+        .start {
+            //background-color: #5c6a87;
+            border-bottom: 4px solid #ffffff;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            .material-icons { font-size: 36px; }
+        }
+    }
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */ -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */ text-rendering: optimizeLegibility;
+    /* Support for Firefox. */ -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */ font-feature-settings: 'liga';
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../font/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../font/MaterialIcons-Regular.woff) format('woff'),
+    url(../font/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+/* latin */
+@font-face {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poiret One'), local('PoiretOne-Regular'), url('../font/poiretOne-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

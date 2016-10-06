@@ -1,35 +1,45 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-select.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h1 id="sleep-text">sleep?</h1>
-    
-    <div id="selection">
-        <input id=inputVal type="number"/>
-        <select id="increments" class="selectpicker">
-            <option value="seconds">seconds</option>
-            <option value="minutes">minutes</option>
-            <option value="hours">hours</option>
-        </select>
-    </div>
-    
-    <button id="setBtn" type="submit" value="set">set!</button>
-
-    <div id="block-container">
-        <div id="wordage" class="xx-large hidden">
-            <p>Sleeping in</p>
+    <div class="container">
+        <h1 id="sleep-text">Sleeper</h1>
+        <div id="selection" class="row">
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <input id=inputVal class="indent" type="number" min="0" value="5"/>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <select id="increments" class="indent">
+                        <option value="seconds">seconds</option>
+                        <option value="minutes" selected>minutes</option>
+                        <option value="hours">hours</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <button id="setBtn" class="start" type="submit" value="set"><i class="material-icons">timer</i></button>
+                </div>
+            </div>
         </div>
 
-        <div id="timer" class="xx-large hidden">
+        <div id="block-container">
+            <div id="wordage" class="xx-large hidden">
+                <p>Sleeping in</p>
+            </div>
+
+            <div id="timer" class="xx-large hidden">
+            </div>
         </div>
     </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
     <script>require("./index.js");</script>
 </body>
 </html>
