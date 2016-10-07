@@ -7,8 +7,8 @@ let mainWindow;
 app.on("ready", function() {
     mainWindow = new BrowserWindow(
         {
-            width: 300, 
-            height: 300,
+            width: 800,
+            height: 600,
             title: "Sleeper",
             autoHideMenuBar: true
         });
