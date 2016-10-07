@@ -69,7 +69,7 @@ function executeSleep() {
     //Specifically for windows
     if (os.type() === "Windows_NT")
     {
-        exec('assets\\test.bat',
+        exec('assets\\sleep.bat',
             function (error, stdout, stderr) {
                 if (error) {
                     console.log('exec error: ' + error);
